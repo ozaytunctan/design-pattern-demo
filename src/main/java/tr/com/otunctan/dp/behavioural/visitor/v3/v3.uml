@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>tr.com.otunctan.dp.behavioural.visitor.v3</OriginalElement>
+  <nodes>
+    <node x="51.676315789473676" y="525.1368421052632">tr.com.otunctan.dp.behavioural.visitor.v3.ClassicVisitorDemo</node>
+    <node x="20.0" y="-14.0">tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionVisitor</node>
+    <node x="152.0" y="392.0">tr.com.otunctan.dp.behavioural.visitor.v3.DoubleExpression</node>
+    <node x="22.5" y="279.0">tr.com.otunctan.dp.behavioural.visitor.v3.Expression</node>
+    <node x="-107.0" y="392.0">tr.com.otunctan.dp.behavioural.visitor.v3.AdditionExpression</node>
+    <node x="147.0" y="135.0">tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionCalculator</node>
+    <node x="-107.0" y="123.0">tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionPrinter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="tr.com.otunctan.dp.behavioural.visitor.v3.AdditionExpression" target="tr.com.otunctan.dp.behavioural.visitor.v3.Expression" relationship="GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="12.5" y="367.0" />
+      <point x="142.0" y="367.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="tr.com.otunctan.dp.behavioural.visitor.v3.DoubleExpression" target="tr.com.otunctan.dp.behavioural.visitor.v3.Expression" relationship="GENERALIZATION">
+      <point x="0.0" y="-31.5" />
+      <point x="271.5" y="367.0" />
+      <point x="142.0" y="367.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionCalculator" target="tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionVisitor" relationship="REALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="264.0" y="98.0" />
+      <point x="137.0" y="98.0" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionPrinter" target="tr.com.otunctan.dp.behavioural.visitor.v3.ExpressionVisitor" relationship="REALIZATION">
+      <point x="0.0" y="-55.5" />
+      <point x="10.0" y="98.0" />
+      <point x="137.0" y="98.0" />
+      <point x="0.0" y="43.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.273031825795645" showDependencies="false" x="293.7875" y="375.5" />
+  <SelectedNodes>
+    <node>tr.com.otunctan.dp.behavioural.visitor.v3.ClassicVisitorDemo</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
