@@ -16,15 +16,14 @@ public interface Salary {
 }
 
 
-
-class AdditionalFamilySalary implements Salary {
+class FamilySalary implements Salary {
 
     private Salary salary;
 
     private int childCount;
     private BigDecimal childPerPrice = BigDecimal.valueOf(100);
 
-    public AdditionalFamilySalary(Salary salary, int childCount) {
+    public FamilySalary(Salary salary, int childCount) {
         this.salary = salary;
         this.childCount = childCount;
     }
@@ -73,7 +72,7 @@ class BaseSalary implements Salary {
     private int kidemYear;
     private int kidemDegree;
 
-    private Map<Integer, BigDecimal> baseSalaryMap = new HashMap<>();
+    private Map<Integer, BigDecimal> baseSalaryMap;
 
     public BaseSalary(Salary salary, int kidemYear, int kidemDegree) {
         this.salary = salary;
@@ -116,25 +115,26 @@ class EmptySalary implements Salary {
         return new BigDecimal(0);
     }
 }
-class SalaryDemo{
+
+class SalaryDemo {
 
     public static void main(String[] args) {
-        EmptySalary startSalary=new EmptySalary();
+        EmptySalary startSalary = new EmptySalary();
         System.out.println("Empty Salary:");
         System.out.println(startSalary.getItems().size());
         System.out.println(startSalary.calculateTotalSalary());
 
-        BaseSalary baseSalary=new BaseSalary(startSalary,1,10);
-        System.out.println("Added base salary:");
+        BaseSalary baseSalary = new BaseSalary(startSalary, 1, 10);
+        System.out.println("Base salary:");
         System.out.println(baseSalary.getItems().size());
         System.out.println(baseSalary.calculateTotalSalary());
 
-        AdditionalFamilySalary familySalary=new AdditionalFamilySalary(baseSalary,3);
-        System.out.println("Added family salary");
+        FamilySalary familySalary = new FamilySalary(baseSalary, 3);
+        System.out.println("Family salary:");
         System.out.println(familySalary.getItems().size());
         System.out.println(familySalary.calculateTotalSalary());
 
-        SocialAssistance socialAssistance=new SocialAssistance(familySalary);
+        SocialAssistance socialAssistance = new SocialAssistance(familySalary);
         System.out.println("Social asistance salary:");
         System.out.println(socialAssistance.getItems().size());
         System.out.println(socialAssistance.calculateTotalSalary());
